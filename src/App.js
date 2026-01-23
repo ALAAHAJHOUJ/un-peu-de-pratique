@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-       <Cube></Cube>
+      <Cube></Cube>
     </>
 
   );
