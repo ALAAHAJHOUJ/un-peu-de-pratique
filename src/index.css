@@ -12,9 +12,53 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content:center;
     flex-direction:column;
     gap: 20px;
+    padding-bottom: 100px;
+}
+
+
+
+.tester{
+    transition: all;
+    transition-duration: 2s;
+}
+
+.tester:hover{
+    transform:rotateY(180deg)
+}
+
+.tester1{
+    perspective: 1000px;
+}
+
+
+
+
+.tester22:hover::before{
+scale: 1;
+}
+
+
+.tester22::before{
+content: "";
+scale: 0;
+transition:all;
+transition-duration: 2s;
+left:0;
+top: 0;
+background-color: red;
+width: 100%;
+height: 2px;
+position: absolute;
+transform-origin: left top;
+}
+
+
+.rotate2{
+    transform: rotate(10deg);
+    opacity: 0.6;
 }
 

@@ -1,10 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
-function Tester5() {
+function Tester5({changer1}) {
   const ref1=useRef()
   const ref2=useRef()
   const ref3=useRef(0)
   const ref4=useRef(0)
+  const ref5=useRef()
+  const arreter=useRef(false)
+
+
 
   const changer=(e)=>{
     if(e.target.innerText=="Pivoter 1")
@@ -18,9 +22,11 @@ function Tester5() {
     }
   }
 
+
+
   return (
     <>
-            <div style={{border:"1px solid black",width:"300px",height:"300px",display:"flex",gap:"30px",justifyContent:"center",alignItems:"center",perspective:"1000px"}}>
+            <div onClick={()=>{changer1()}} ref={ref5} style={{border:"1px solid black",width:"300px",height:"300px",display:"flex",gap:"30px",justifyContent:"center",alignItems:"center",perspective:"1000px"}}>
                 <div ref={ref1} style={{width:"100px",height:"100px",transformStyle:"preserve-3d",position:"relative",transition:"all",transitionDuration:"2s"}}>
                     <div style={{background:"red",opacity:0.6,position:"absolute",top:0,right:0,width:"100%",height:"100%",transform:"rotateX(0deg) translateZ(100px)",color:"white",fontSize:"30px",display:"flex",justifyContent:"center",alignItems:"center"}}>1</div>
                     <div style={{background:"green",opacity:0.6,position:"absolute",top:0,right:0,width:"100%",height:"100%",transform:"rotateX(90deg) translateZ(100px)",color:"white",fontSize:"30px",display:"flex",justifyContent:"center",alignItems:"center"}}>2</div>
