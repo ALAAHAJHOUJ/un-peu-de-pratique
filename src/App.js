@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react';
-import Cube from './Cube';
-import Tester11 from './Tester11';
-import Tester5 from './Tester5'
-import Pratique from './Pratique';
+import Flex from './Flex';
+import Table from './Table';
 
 
 function App() {
-  const [element,setElement]=useState("draganddrop")
   
-
-
-
-
   return (
     <>
-      <Pratique></Pratique>
+      <Table></Table>
     </>
 
   );
